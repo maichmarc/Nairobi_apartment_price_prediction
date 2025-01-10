@@ -1,0 +1,12 @@
+pandas
+numpy
+seaborn
+scikit-learn
+matplotlib
+# xgboost
+# catboost
+# flask
+# dill
+# joblib
+# pickle
+-e .
