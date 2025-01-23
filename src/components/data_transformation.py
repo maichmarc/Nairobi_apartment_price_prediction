@@ -36,7 +36,7 @@ class DataTransformation:
 
             data=pd.read_csv('artifact\prep.csv')
             data = remove_outliers(data)
-            print(data.size)
+            # print(data.size)
             logging.info('Train test split initiated')
             train_set, test_set = train_test_split(data, test_size=0.2, random_state=42)
             train_set.to_csv(self.data_transformation_config.train_data_path, index=False, header=True)
@@ -153,8 +153,4 @@ class DataTransformation:
             )
         
         except Exception as e:
-            raise CustomException(e,sys)
-
-
-
-    
+            raise CustomException(e,sys)   

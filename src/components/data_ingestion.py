@@ -11,6 +11,8 @@ from src.utils import remove_duplicates_null
 from src.utils import keep_locations
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
 
 
 @dataclass
@@ -33,7 +35,7 @@ class DataIngestion:
             data = remove_duplicates_null(df)
             data = location_fill(data,locations,'Location','Location')
             data = keep_locations(data, 'Location', 4)
-            print(data.size)
+            # print(data.size)
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path), exist_ok=True)
             logging.info('Cleaning the data initiated i.e. remove duplicates and missing data')
             df.to_csv(self.ingestion_config.raw_data_path, index=False, header=True)
@@ -59,6 +61,10 @@ if __name__ == '__main__':
     data_transformation = DataTransformation()
     train_data, test_data,_= data_transformation.get_data_transformer_obj()
     train_arr, test_arr,_ = data_transformation.initiate_data_transformation(train_data, test_data)
+
+    model_trainer = ModelTrainer()
+    print(model_trainer.initiate_model_trainer(train_arr, test_arr))
+
     
 
 
