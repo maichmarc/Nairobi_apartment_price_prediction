@@ -3,8 +3,8 @@ numpy
 seaborn
 scikit-learn
 matplotlib
-# xgboost
-# catboost
+xgboost
+catboost
 # flask
 # dill
 # joblib
