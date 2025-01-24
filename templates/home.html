@@ -1,0 +1,118 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Apartment Price Prediction</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <!--<h1>-->
+        <!--    <legend>Student Exam Performance Prediction</legend>-->
+        <!--</h1>-->
+        <div class="mb-3">
+            <label class="form-label">Bedrooms</label>
+            <select class="form-control" name="bedrooms" placeholder="Enter the number of bedrooms" required>
+                <option class="placeholder" selected disabled value="">Select number of bedrooms</option>
+                <option value= 0>
+                    0
+                </option>
+                <option value= 1>
+                    1
+                </option>
+                <option value= 2>
+                    2
+                </option>
+                <option value= 3>
+                    3
+                </option>
+                <option value= 4>
+                    4
+                </option>
+                <option value= 5>
+                    5
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bathrooms</label>
+            <select class="form-control" name="bathrooms" placeholder="Enter the number of bathrooms" required>
+                <option class="placeholder" selected disabled value="">Select Bathrooms</option>
+                <option value= 1>
+                    1
+                </option>
+                <option value= 2>
+                    2
+                </option>
+                <option value= 3>
+                    3
+                </option>
+                <option value= 4>
+                    4
+                </option>
+                <option value= 5>
+                    5
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Location</label>
+            <select class="form-control" name="location"
+                placeholder="Enter the Location" required>
+                <option class="placeholder" selected disabled value="">Select Location</option>
+                <option value="Westlands">
+                    Westlands
+                </option>
+                <option value="Kilimani">
+                    Kilimani
+                </option>
+                <option value="Kileleshwa">
+                    Kileleshwa
+                </option>
+                <option value="Lavington">
+                    Lavington
+                </option>
+                <option value="Riverside">
+                    Riverside
+                </option>
+                <option value="Parklands">
+                    Parklands
+                </option>
+                <option value="Mombasa Road">
+                    Mombasa Road
+                </option>
+                <option value="Lower Kabete">
+                    Lower Kabete
+                </option>
+                <option value="Thika">
+                    Thika
+                </option>
+                <option value="Ngong Road">
+                    Ngong Road
+                </option>
+                <option value="Dagoretti">
+                    Dagoretti
+                </option>
+                <option value="Spring Valley">
+                    Spring Valley
+                </option>
+                <option value="Kitisuru">
+                    Kitisuru
+                </option>
+                <option value="Embakasi">
+                    Embakasi                
+                </option>
+                <option value="Kiambu">
+                    Kiambu
+                </option>
+                <option value="Riara">
+                    Riara
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict apartment price" required />
+        </div>
+    </form>
+    <h2>
+       The price predicted is Kshs. {{results}}
+    </h2>
+   <body>
+</html>
