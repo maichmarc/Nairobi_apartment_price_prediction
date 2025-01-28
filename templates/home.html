@@ -1,12 +1,21 @@
-<html>
+<!-- <html> -->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Arimio' rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Mind:300' rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+
+</head>
 <body>
     <div class="login">
        <h1>Apartment Price Prediction</h1>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <!--<h1>-->
-        <!--    <legend>Student Exam Performance Prediction</legend>-->
-        <!--</h1>-->
         <div class="mb-3">
             <label class="form-label">Bedrooms</label>
             <select class="form-control" name="bedrooms" placeholder="Enter the number of bedrooms" required>
@@ -111,8 +120,9 @@
             <input class="btn btn-primary" type="submit" value="Predict apartment price" required />
         </div>
     </form>
-    <h2>
-       The price predicted is Kshs. {{results}}
-    </h2>
+    <h3>
+       <!-- The price predicted is Kshs. {{results}} -->
+        {{results}}
+    </h3>
    <body>
 </html>

@@ -37,9 +37,9 @@ def predict_datapoint():
 
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
-        return render_template('home.html', results = f"The predicted price for a {pred_df['Bedrooms'][0]} bedroom, {int(pred_df['Bathrooms'][0])} bathroom apartment in {pred_df['Location'][0]} is Kshs. {results[0]}")
+        return render_template('home.html', bedrooms = str(pred_df['Bedrooms']), results = results[0])
     
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0')
         

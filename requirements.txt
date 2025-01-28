@@ -6,6 +6,7 @@ matplotlib
 xgboost
 catboost
 flask
+gunicorn
 # dill
 # joblib
 # pickle
