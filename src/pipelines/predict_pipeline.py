@@ -34,9 +34,9 @@ class PredictPipeline:
         try:
             # model_path = 'artifact\model.pkl'
             # preprocessor_path = 'artifact\preprocessor.pkl'
-            with open('artifact\preprocessor.pkl', 'rb') as preprocessor_obj:
+            with open('artifact/preprocessor.pkl', 'rb') as preprocessor_obj:
                 preprocessor = pickle.load(preprocessor_obj)
-            with open('artifact\model.pkl', 'rb') as model_obj:
+            with open('artifact/model.pkl', 'rb') as model_obj:
                 model = pickle.load(model_obj)
             # preprocessor = load_object(file_path = preprocessor_path)
             data_scaled = preprocessor.transform(features)
