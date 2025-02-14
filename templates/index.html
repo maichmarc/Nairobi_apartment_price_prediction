@@ -1,4 +1,15 @@
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+<body>
 <h1>Welcome to the home page</h1>
+
+<h5>This webpage uses data scraped from 'https://www.buyrentkenya.com/' to predict the price of an apartment in Nairobi based on 
+    its number of bedrooms, bathrooms and the location.
+    Click the button below to proceed to predict apartment prices.
+</h5>
+
+<!-- <a href="{{ url_for('predict_datapoint') }}"></a><button class=grey style="height:75px;width:150px">Predict</button> -->
+<a href="{{ url_for('predict_datapoint') }}"><button class=grey style="height:75px;width:150px">Predict</button></a>
+
+</body>
