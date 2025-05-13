@@ -7,6 +7,7 @@ xgboost
 catboost
 flask
 gunicorn
+streamlit
 # dill
 # joblib
 # pickle
